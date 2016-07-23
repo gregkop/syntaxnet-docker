@@ -57,7 +57,7 @@ RUN pip install asciitree
 
 # Download and build Syntaxnet
 
-RUN git clone --recursive https://github.com/tensorflow/models.git /root/models
+RUN git clone --recursive https://github.com/gregkop/models.git /root/models
 RUN cd /root/models/syntaxnet/tensorflow && echo | ./configure
 RUN cd /root/models/syntaxnet && bazel test syntaxnet/... util/utf8/...
 
